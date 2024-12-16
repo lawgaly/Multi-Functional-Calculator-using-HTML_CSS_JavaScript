@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Functional Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Multi-Functional Calculator (5-in-1)</h1>
+    </header>
+    <!-- Navigation Buttons -->
+    <div class="navigationButtons">
+        <button onclick="showGrid(1)">Standard</button>
+        <button onclick="showGrid(2)">Scientific</button>
+        <button onclick="showGrid(3)">Programmer</button>
+        <button onclick="showGrid(4)">Currency</button>
+        <button onclick="showGrid(5)">Salary/Tax</button>
+    </div>
+    <!-- The Standard Calculator Grid -->
+    <div class="calculatorContainer" id="grid1">
+        <input type="text" class="calculator-screen" value="0" disabled />
+        <div class="calculator-keys">
+            <button type="button" class="all-clear" value="all-clear">AC</button>
+            <button type="button" class="offKey">Off</button>
+            <button class="backspace-btn">&#9003;</button>
+            <button type="button" class="operator" value="/">&divide;</button>
+            <button type="button" value="7">7</button>
+            <button type="button" value="8">8</button>
+            <button type="button" value="9">9</button>
+            <button type="button" class="operator" value="*">&times;</button>
+            <button type="button" value="4">4</button>
+            <button type="button" value="5">5</button>
+            <button type="button" value="6">6</button>
+            <button type="button" class="operator" value="-">-</button>
+            <button type="button" value="1">1</button>
+            <button type="button" value="2">2</button>
+            <button type="button" value="3">3</button>
+            <button type="button" class="operator" value="+">+</button>
+            <button id="plusmins"s>&plusmn;</button>         
+            <button type="button" value="0">0</button>
+            <button type="button" class="decimal" value=".">.</button>
+            <button type="button" class="equal-sign" value="=">=</button>
+        </div>
+    </div>
+    <!-- The Scientific Calculator Grid -->
+    <div class="calculatorContainer" id="grid2">
+        <input type="text" class="calculator-screen" value="0" disabled />
+        <div class="calculator-keys">
+            <button type="button" class="all-clear" value="all-clear">AC</button>
+            <button class="backspace-btn">&#9003;</button>
+            <button type="button" class="data-operations" value="sin">sin&deg;</button>
+            <button type="button" class="data-operations" value="cos">cos&deg;</button>
+            <button type="button" class="data-operations" value="tan">tan&deg;</button>
+            <button type="button" class="data-operations" value="log">log&deg;</button>
+            <button type="button" class="offKey">Off</button>
+            <button type="button" class="data-operations" value="pow2">x<sup>2</sup></button>
+            <button type="button" class="data-operations" value="powxY">x<sup>y</sup></button>
+            <button type="button" class="data-operations" value="pow_ten">x<sup>10</sup></button>
+            <button type="button" class="data-operations" value="fact_n">n<sup>!</button>
+            <button type="button" class="operator" value="/">&divide;</button>
+            <button type="button" class="data-operations" value="absButton">abs</button>
+            <button type="button" value="7">7</button>
+            <button type="button" value="8">8</button>
+            <button type="button" value="9">9</button>
+            <button type="button" class="data-operations" value="mod">mod</button>
+            <button type="button" class="operator" value="*">&times;</button>
+            <button type="button" class="data-operations" value="sqrt">√</button>
+            <button type="button" value="4">4</button>
+            <button type="button" value="5">5</button>
+            <button type="button" value="6">6</button>
+            <button type="button" class="data-operations" value="e_x">e<sup>x</sup></button>
+            <button type="button" class="operator" value="-">-</button>
+            <button type="button" class="data-operations" value="piValue">π</button>
+            <button type="button" value="1">1</button>
+            <button type="button" value="2">2</button>
+            <button type="button" value="3">3</button>
+            <button type="button" class="data-operations" value="oneoverx">1</sup>&frasl;<sub>x</sub></button>
+            <button type="button" class="operator" value="+">+</button>          
+            <button type="button" class="data-operations"value="odd"> Odd<sup>?</sup></button>
+            <button type="button" class="data-operations" value="even">Even<sup>?</sup></button>
+            <button type="button" value="0">0</button>
+            <button type="button" class="decimal" value=".">.</button>
+            <button id="plusmins"s>&plusmn;</button>         
+            <button type="button" class="equal-sign" value="=">=</button>
+        </div>
+    </div>
+    <!-- The Programmer Calculator Grid -->
+<div class="calculatorContainer" id="grid3">
+        <input type="text" class="calculator-screen" value="0" disabled />
+        <div class="numberSystem">
+            <label for="" class="labelNumberSystem">Hexadecimal Number</label>
+            <input type="text" class="textNumberSystem" id ="hexadecimal" value="0">
+            <label for="" class="labelNumberSystem">Octal Number</label>
+            <input type="text" class="textNumberSystem" id ="octal" value="0">          
+            <label for="" class="labelNumberSystem">Binary Number</label>
+            <input type="text" class="textNumberSystem" id ="binary" value="0">
+        </div>
+        <div class="calculator-keys">
+            <button type="button" class="all-clear" value="all-clear">AC</button>
+            <button type="button" class="offKey">Off</button>
+            <button class="backspace-btn">&#9003;</button>
+            <button type="button" class="operator" value="/">&divide;</button>
+            <button type="button" value="7">7</button>
+            <button type="button" value="8">8</button>
+            <button type="button" value="9">9</button>
+            <button type="button" class="operator" value="*">&times;</button>
+            <button type="button" value="4">4</button>
+            <button type="button" value="5">5</button>
+            <button type="button" value="6">6</button>
+            <button type="button" class="operator" value="-">-</button>
+            <button type="button" value="1">1</button>
+            <button type="button" value="2">2</button>
+            <button type="button" value="3">3</button>
+            <button type="button" class="operator" value="+">+</button>
+            <button class="operator">&plusmn;</button>         
+            <button type="button" value="0">0</button>
+            <button type="button" class="decimal" value=".">.</button>
+            <button type="button" class="equal-sign" value="=">=</button>
+        </div>
+    </div>
+    <!-- The Programmer Calculator Grid -->
+    <div class="calculatorContainer" id="grid4">
+        <input type="number" class="calculator-screen" value=0 id="amountCurrency" placeholder="Enter amount" />
+        <div class="calculator-keys">
+            <label for="from_Currency">From:</label>
+            <select id="from_Currency">
+                <option value="GBP">GBP- British pound</option>
+                <option value="EUR">EUR - Euro</option>
+                <option value="USD">USD - United States dollar</option>
+                <option value="CAD">CAD - Canadian dollar</option>
+                <option value="AUD">AUD - Australian dollar</option>
+                <option value="NZD">NZD - New Zealand dollar</option>
+                <option value="CNY">CNY - Chinese Yuan</option>
+            </select>
+            <label for="to_Currency">To:</label>
+            <select id="to_Currency">
+                <option value="USD">USD - United States dollar</option>
+                <option value="EUR">EUR - Euro</option>
+                <option value="GBP">GBP- British pound</option>
+                <option value="CAD">CAD - Canadian dollar</option>
+                <option value="AUD">AUD - Australian dollar</option>
+                <option value="NZD">NZD - New Zealand dollar</option>
+                <option value="CNY">CNY - Chinese Yuan</option>
+            </select>
+            <button class="btn" id="onvecrt_btn">Convert</button>
+            <h1>Converted Amount: <span id="resultofCurrency">0</span></h1>
+        </div>
+    </div>
+
+    <div class="calculatorContainer" id="grid5">
+        <h1>Enter Your salary:</h1>
+        <div class="calculator-keys">
+                <input type="number" class="calculator-screen" name="salary" value="0" class="currency">
+                <select id="frequency" name="frequency">
+                    <option value="weekly">Weekly</option>
+                    <option value="monthly">Monthly</option>
+                    <option value="yearly">Yearly</option>
+                </select>
+                <button class="btn" id="recalculateBtn">Recalculate</button>
+        </div>
+    </div>
+</body>
+</html>
